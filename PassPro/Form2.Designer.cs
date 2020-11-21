@@ -54,6 +54,7 @@ namespace PassPro
             this.txtLoginPassword.Name = "txtLoginPassword";
             this.txtLoginPassword.Size = new System.Drawing.Size(169, 23);
             this.txtLoginPassword.TabIndex = 1;
+            this.txtLoginPassword.UseSystemPasswordChar = true;
             // 
             // label1
             // 

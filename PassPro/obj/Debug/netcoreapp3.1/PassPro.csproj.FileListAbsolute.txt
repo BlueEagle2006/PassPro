@@ -25,3 +25,4 @@ C:\Users\User\source\repos\PassPro\PassPro\bin\Debug\netcoreapp3.1\runtimes\win\
 C:\Users\User\source\repos\PassPro\PassPro\obj\Debug\netcoreapp3.1\PassPro.csproj.CopyComplete
 C:\Users\User\source\repos\PassPro\PassPro\obj\Debug\netcoreapp3.1\PassPro.Form2.resources
 C:\Users\User\source\repos\PassPro\PassPro\obj\Debug\netcoreapp3.1\PassPro.Properties.Resources.resources
+C:\Users\User\source\repos\PassPro\PassPro\obj\Debug\netcoreapp3.1\PassPro.Form3.resources
