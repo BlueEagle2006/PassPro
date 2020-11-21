@@ -31,12 +31,14 @@ namespace PassPro
             MongoCRUD db = new MongoCRUD("URL");
             try { 
             List<Class> liste = db.LoadRecords<Class>("All");
-            int i = 0;
             listResult.Text = "";
+            string user = Form2.User;
             foreach (Class v in liste) 
             {
-                listResult.Text += $"{liste[i].Web}/{liste[i].Name}..................................{liste[i].Content}\n";
-                i += 1;
+                    if (v.User == user)
+                    {
+                        listResult.Text += $"{v.Web}/{v.Name}..................................{v.Content}\n";
+                    }
             }
             }
             catch
@@ -51,6 +53,7 @@ namespace PassPro
                 txtPassword.Text = YeniSifre();
             };
             Class class1 = new Class();
+            class1.User = Form2.User;
             class1.Web= textAddWeb.Text;
             class1.Name = txtAddURL.Text;
             class1.Content = txtPassword.Text;
@@ -72,22 +75,19 @@ namespace PassPro
         {
             MongoCRUD db = new MongoCRUD("URL");
             List<Class> liste = db.LoadRecords<Class>("All");
-            int i = 0;
             listResult.Text = "";
             string a = txtSearchURL.Text;
+            string user = Form2.User;
             foreach (Class v in liste)
             {
-                for(int j = 0 ; j <= liste[i].Name.Length-a.Length ; j++)
+                for(int j = 0 ; j <= v.Name.Length-a.Length ; j++)
                 {
-
-                    if (a==liste[i].Name.Substring(j,a.Length))
+                    if (a==v.Name.Substring(j,a.Length) && v.User==user)
                     {
-                        listResult.Text += $"{liste[i].Web}--{liste[i].Name}.................................{liste[i].Content}\n";
+                        listResult.Text += $"{v.Web}--{v.Name}.................................{v.Content}\n";
                         break;
                     }
                 }
-                    
-                i += 1;
             }
         }
     }

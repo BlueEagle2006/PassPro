@@ -13,9 +13,12 @@ namespace PassPro
             InitializeComponent();
         }
 
+        public static string User { get; private set; }
+
         // TODO:MongoDB First ile yapılacak.
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            Form2.User = txtLoginUser.Text;
             string EvUser = txtLoginUser.Text;
             string EvPassword = txtLoginPassword.Text;
             MongoCRUD db = new MongoCRUD("URL");
