@@ -29,6 +29,7 @@ namespace PassPro
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.txtLoginUser = new System.Windows.Forms.TextBox();
             this.txtLoginPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,18 +37,20 @@ namespace PassPro
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnSignUp = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtLoginUser
             // 
-            this.txtLoginUser.Location = new System.Drawing.Point(288, 128);
+            this.txtLoginUser.Location = new System.Drawing.Point(236, 128);
             this.txtLoginUser.Name = "txtLoginUser";
             this.txtLoginUser.Size = new System.Drawing.Size(169, 23);
             this.txtLoginUser.TabIndex = 0;
             // 
             // txtLoginPassword
             // 
-            this.txtLoginPassword.Location = new System.Drawing.Point(288, 181);
+            this.txtLoginPassword.Location = new System.Drawing.Point(236, 181);
             this.txtLoginPassword.Name = "txtLoginPassword";
             this.txtLoginPassword.Size = new System.Drawing.Size(169, 23);
             this.txtLoginPassword.TabIndex = 1;
@@ -55,7 +58,7 @@ namespace PassPro
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(217, 131);
+            this.label1.Location = new System.Drawing.Point(165, 131);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 15);
             this.label1.TabIndex = 2;
@@ -64,7 +67,7 @@ namespace PassPro
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(224, 184);
+            this.label2.Location = new System.Drawing.Point(172, 184);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 15);
             this.label2.TabIndex = 3;
@@ -72,7 +75,7 @@ namespace PassPro
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(329, 234);
+            this.btnLogin.Location = new System.Drawing.Point(277, 234);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
             this.btnLogin.TabIndex = 4;
@@ -82,7 +85,7 @@ namespace PassPro
             // 
             // btnSignUp
             // 
-            this.btnSignUp.Location = new System.Drawing.Point(665, 26);
+            this.btnSignUp.Location = new System.Drawing.Point(613, 26);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(75, 23);
             this.btnSignUp.TabIndex = 5;
@@ -93,17 +96,28 @@ namespace PassPro
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(507, 30);
+            this.label3.Location = new System.Drawing.Point(455, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 15);
             this.label3.TabIndex = 6;
             this.label3.Text = "If you don\'t have an acount";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(277, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(83, 81);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(711, 423);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.btnLogin);
@@ -111,8 +125,10 @@ namespace PassPro
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtLoginPassword);
             this.Controls.Add(this.txtLoginUser);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "PassPro";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,5 +143,6 @@ namespace PassPro
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnSignUp;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

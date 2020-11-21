@@ -11,7 +11,7 @@ namespace BluewayWinForms.UI.Database
 
         public MongoCRUD(string database)
         {
-            var client = new MongoClient("mongodb+srv://********:********@database1.r6vau.azure.mongodb.net/test?authSource=admin&replicaSet=atlas-wlm0la-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true");
+            var client = new MongoClient("mongodb+srv://can:ergenekon2020@database1.r6vau.azure.mongodb.net/test?authSource=admin&replicaSet=atlas-wlm0la-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true");
             db = client.GetDatabase(database);
         }
 

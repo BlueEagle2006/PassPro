@@ -82,7 +82,7 @@ namespace PassPro
 
                     if (a==liste[i].Name.Substring(j,a.Length))
                     {
-                        listResult.Text += $"{liste[i].Web}/{liste[i].Name}..................................{liste[i].Content}\n";
+                        listResult.Text += $"{liste[i].Web}--{liste[i].Name}.................................{liste[i].Content}\n";
                         break;
                     }
                 }

@@ -7,6 +7,7 @@ namespace PassPro1
     {
         [BsonId]
         public Guid Id { get; set; }
+        public string User { get; set; }
         public string Web { get; set; }
         public string Name { get; set; }
         public string Content { get; set; }

@@ -21,21 +21,22 @@ namespace PassPro
             int i = 0;
             foreach (UserCC v in liste)
             {
-                if (liste[i].Name==EvUser)
+                if (liste[i].Name==EvUser && liste[i].Password != EvPassword)
                 {
-                    if (liste[i].Password == EvPassword)
-                    {
-                    }
+                   Form1 form1 = new Form1();
+                   form1.ShowDialog();
                 }
 
                 i += 1;
             }
-            
+            MessageBox.Show("Başarısız");
+
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            
+            Form1 form1 = new Form1();
+            form1.ShowDialog();
         }
     }
 }

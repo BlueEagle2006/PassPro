@@ -29,6 +29,7 @@ namespace PassPro
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnURL = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtAddURL = new System.Windows.Forms.TextBox();
@@ -44,7 +45,7 @@ namespace PassPro
             // 
             // btnURL
             // 
-            this.btnURL.Location = new System.Drawing.Point(704, 372);
+            this.btnURL.Location = new System.Drawing.Point(683, 372);
             this.btnURL.Name = "btnURL";
             this.btnURL.Size = new System.Drawing.Size(75, 23);
             this.btnURL.TabIndex = 0;
@@ -55,7 +56,7 @@ namespace PassPro
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(230, 376);
+            this.label1.Location = new System.Drawing.Point(209, 376);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 15);
             this.label1.TabIndex = 3;
@@ -105,14 +106,15 @@ namespace PassPro
             // 
             // txtSearchURL
             // 
-            this.txtSearchURL.Location = new System.Drawing.Point(267, 371);
+            this.txtSearchURL.Location = new System.Drawing.Point(246, 371);
             this.txtSearchURL.Name = "txtSearchURL";
             this.txtSearchURL.Size = new System.Drawing.Size(431, 23);
             this.txtSearchURL.TabIndex = 11;
             // 
             // listResult
             // 
-            this.listResult.Location = new System.Drawing.Point(267, 12);
+            this.listResult.BackColor = System.Drawing.SystemColors.Window;
+            this.listResult.Location = new System.Drawing.Point(246, 12);
             this.listResult.Name = "listResult";
             this.listResult.ReadOnly = true;
             this.listResult.Size = new System.Drawing.Size(431, 305);
@@ -139,8 +141,9 @@ namespace PassPro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(759, 425);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textAddWeb);
             this.Controls.Add(this.listResult);
@@ -152,6 +155,7 @@ namespace PassPro
             this.Controls.Add(this.txtAddURL);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnURL);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "ProPass";
             this.Load += new System.EventHandler(this.Form1_Load);
