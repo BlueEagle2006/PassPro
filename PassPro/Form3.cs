@@ -28,5 +28,10 @@ namespace PassPro
                 MessageBox.Show("You Can't Let Username or Password Blank");
             }
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

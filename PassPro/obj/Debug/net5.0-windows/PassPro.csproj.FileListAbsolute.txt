@@ -29,3 +29,4 @@ C:\Users\User\source\repos\PassPro\PassPro\obj\Debug\net5.0-windows\PassPro.dll
 C:\Users\User\source\repos\PassPro\PassPro\obj\Debug\net5.0-windows\ref\PassPro.dll
 C:\Users\User\source\repos\PassPro\PassPro\obj\Debug\net5.0-windows\PassPro.pdb
 C:\Users\User\source\repos\PassPro\PassPro\obj\Debug\net5.0-windows\PassPro.genruntimeconfig.cache
+C:\Users\User\source\repos\PassPro\PassPro\obj\Debug\net5.0-windows\PassPro.Form4.resources

@@ -43,14 +43,14 @@ namespace PassPro
             // 
             this.txtUsername.Location = new System.Drawing.Point(269, 125);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(120, 23);
+            this.txtUsername.Size = new System.Drawing.Size(153, 23);
             this.txtUsername.TabIndex = 0;
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(269, 170);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(120, 23);
+            this.txtPassword.Size = new System.Drawing.Size(153, 23);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
@@ -74,7 +74,7 @@ namespace PassPro
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(294, 220);
+            this.btnRegister.Location = new System.Drawing.Point(306, 220);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(75, 23);
             this.btnRegister.TabIndex = 4;
@@ -85,7 +85,7 @@ namespace PassPro
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(289, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(306, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(80, 81);
             this.pictureBox1.TabIndex = 5;
@@ -107,6 +107,7 @@ namespace PassPro
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PassPro";
+            this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
