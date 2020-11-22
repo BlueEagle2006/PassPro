@@ -1,8 +1,9 @@
-﻿using BluewayWinForms.UI.Database;
-using PassPro1;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Windows.Forms;
+using System.Collections.Generic;
+// team
+using PassPro1;
+using PassPro.Database;
 
 namespace PassPro
 {
@@ -26,63 +27,79 @@ namespace PassPro
             }
             return result;
         }
-        public void listResult1()
+
+        public void addDetailsToList()
         {
-            MongoCRUD db = new MongoCRUD("URL");
-            try { 
-            List<Class> liste = db.LoadRecords<Class>("All");
-            listResult.Text = "";
-            string user = Form2.User;
-            foreach (Class v in liste) 
+            try
             {
+                // load details from database
+                List<Detail> details = DetailRepository.Service.LoadDetails();
+
+                // clear list
+                listResult.Text = "";
+
+                // TODO: burada ne yapiyor?
+                string user = Form2.User;
+
+                // add to list
+                foreach (Detail v in details)
+                {
                     if (v.User == user)
                     {
                         listResult.Text += $"{v.Web}/{v.Name}..................................{v.Content}\n";
                     }
+                }
             }
-            }
-            catch
+            catch (Exception ex)
             {
-                return;
+                MessageBox.Show(ex.Message);
             }
         }
+
         private void btnAddURL_Click(object sender, EventArgs e)
         {
             if (txtPassword.Text == "")
             {
                 txtPassword.Text = YeniSifre();
-            };
-            Class class1 = new Class();
-            class1.User = Form2.User;
-            class1.Web= textAddWeb.Text;
-            class1.Name = txtAddURL.Text;
-            class1.Content = txtPassword.Text;
-            MongoCRUD db = new MongoCRUD("URL");
-            db.InsertRecord("All", class1);
+            }
+
+            Detail detail = new Detail();
+            detail.User = Form2.User;
+            detail.Web = textAddWeb.Text;
+            detail.Name = txtAddURL.Text;
+            detail.Content = txtPassword.Text;
+
+            // insert to database
+            DetailRepository.Service.InsertDetail(detail);
+
             MessageBox.Show("Password Saved");
+
             txtPassword.Text = "";
             txtAddURL.Text = "";
             textAddWeb.Text = "";
-            listResult1();
+
+            addDetailsToList();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            listResult1();
+            addDetailsToList();
         }
 
         private void btnURL_Click(object sender, EventArgs e)
         {
-            MongoCRUD db = new MongoCRUD("URL");
-            List<Class> liste = db.LoadRecords<Class>("All");
+            List<Detail> liste = DetailRepository.Service.LoadDetails();
+
             listResult.Text = "";
+
             string a = txtSearchURL.Text;
             string user = Form2.User;
-            foreach (Class v in liste)
+
+            foreach (Detail v in liste)
             {
-                for(int j = 0 ; j <= v.Name.Length-a.Length ; j++)
+                for (int j = 0; j <= v.Name.Length - a.Length; j++)
                 {
-                    if (a==v.Name.Substring(j,a.Length) && v.User==user)
+                    if (a == v.Name.Substring(j, a.Length) && v.User == user)
                     {
                         listResult.Text += $"{v.Web}--{v.Name}.................................{v.Content}\n";
                         break;

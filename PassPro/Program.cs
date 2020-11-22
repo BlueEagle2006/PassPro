@@ -1,7 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PassPro
@@ -19,6 +16,5 @@ namespace PassPro
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form4());
         }
-
     }
 }

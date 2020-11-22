@@ -1,6 +1,7 @@
-﻿using BluewayWinForms.UI.Database;
-using System;
+﻿using System;
 using System.Windows.Forms;
+// team
+using PassPro.Database;
 
 namespace PassPro
 {
@@ -15,11 +16,13 @@ namespace PassPro
         {
             if (txtUsername.Text != "" && txtPassword.Text != "")
             {
-                UserCC user = new UserCC();
+                User user = new User();
                 user.Name = txtUsername.Text;
                 user.Password = txtPassword.Text;
-                MongoCRUD db = new MongoCRUD("URL");
-                db.InsertRecord("Users", user);
+
+                // insert user to database
+                UserRepository.Service.InsertUser(user);
+
                 MessageBox.Show("User Saved");
                 this.Close();
             }

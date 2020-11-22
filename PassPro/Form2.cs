@@ -1,8 +1,7 @@
-﻿using BluewayWinForms.UI.Database;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using System.Windows.Forms;
+// team
+using PassPro.Database;
 
 namespace PassPro
 {
@@ -15,32 +14,23 @@ namespace PassPro
 
         public static string User { get; private set; }
 
-        // TODO:MongoDB First ile yapılacak.
         private void btnLogin_Click(object sender, EventArgs e)
         {
             Form2.User = txtLoginUser.Text;
-            string EvUser = txtLoginUser.Text;
-            string EvPassword = txtLoginPassword.Text;
-            MongoCRUD db = new MongoCRUD("URL");
-            List<UserCC> liste = db.LoadRecords<UserCC>("Users");
+            string evUser = txtLoginUser.Text;
+            string evPassword = txtLoginPassword.Text;
 
-            foreach (UserCC v in liste)
+            var user = UserRepository.Service.Login(evUser, evPassword);
+
+            // kullanıcı bulunamazsa user null gelir
+            if (user == null)
             {
-                
-                if (v.Name==EvUser)
-                {
-                    if (v.Password == EvPassword) 
-                    {
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Şifre Hatalı");
-                    }
-                }
+                MessageBox.Show("Username or Password is wrong!");
             }
-            
-
+            else
+            {
+                this.Close();
+            }
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)

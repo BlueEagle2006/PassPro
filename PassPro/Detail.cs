@@ -1,9 +1,10 @@
 ﻿using System;
+// mongodb
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace PassPro1
 {
-    class Class
+    public class Detail
     {
         [BsonId]
         public Guid Id { get; set; }

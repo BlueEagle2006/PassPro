@@ -1,9 +1,10 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
-using System;
+﻿using System;
+// mongodb
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace PassPro
 {
-    class UserCC
+    public class User
     {
         [BsonId]
         public Guid Id { get; set; }
